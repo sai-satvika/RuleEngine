@@ -23,6 +23,7 @@ The `RuleEngine` is a simple rule evaluation engine implemented in Java. It allo
    ```bash
    cd RuleEngine
 3.Compile the Java file:
+```bash
    javac src/RuleEngine.java
 
 
