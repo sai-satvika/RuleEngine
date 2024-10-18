@@ -19,3 +19,7 @@ The `RuleEngine` is a simple rule evaluation engine implemented in Java. It allo
 1. Clone the repository:
    ```bash
    git clone https://github.com/sai-satvika/RuleEngine.git
+2. Navigate to the project directory:
+   ```bash
+   cd RuleEngine
+   
