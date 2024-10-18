@@ -22,4 +22,14 @@ The `RuleEngine` is a simple rule evaluation engine implemented in Java. It allo
 2. Navigate to the project directory:
    ```bash
    cd RuleEngine
+3.Compile the Java file:
+   ```bash
+   javac src/RuleEngine.java
+**### Usage**
+Creating a Rule
+To create a new rule, use the createRule method:
+   ```bash
+   RuleEngine engine = new RuleEngine();
+   engine.createRule("x > 10");
+
    
