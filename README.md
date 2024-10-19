@@ -38,4 +38,3 @@ The current implementation doesn't include formal unit tests. To test the functi
 ## Note on Development Environment
 
 This project has been successfully tested in Eclipse IDE. Users of other IDEs like IntelliJ IDEA or NetBeans should be able to import and run the project with similar steps, adjusting for their specific IDE's import and run procedures.
-
