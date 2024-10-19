@@ -1,27 +1,21 @@
-# RuleEngine
-A simple rule evaluation engine in Java
-# RuleEngine
+Rule Engine with Abstract Syntax Tree (AST)
+Objective
+This project implements a 3-tier rule engine application that determines user eligibility based on various attributes like age, department, income, spend, etc. The system uses an Abstract Syntax Tree (AST) to represent conditional rules, allowing dynamic creation, modification, and combination of rules.
 
-## Overview
-The `RuleEngine` is a simple rule evaluation engine implemented in Java. It allows users to create, modify, and evaluate rules based on various operators and operands. The engine supports user-defined functions and provides persistence through file operations.
+Features
+Dynamic Rule Creation: Rules can be created dynamically based on user attributes.
+AST Representation: Conditional rules are represented using an Abstract Syntax Tree (AST) for efficient parsing and evaluation.
+Rule Combination: Multiple rules can be combined to form more complex eligibility criteria, with optimized performance through reduced redundant checks.
+Simple API Design: Create and combine rules programmatically using the exposed API.
+Application Design
+1. Data Structure
+The data structure is based on an AST, with nodes representing conditions and logical operators. Each node has the following attributes:
 
-## Features
-- **Rule Creation**: Create new rules using a simple string format.
-- **Rule Modification**: Modify existing rules by index.
-- **Rule Evaluation**: Evaluate rules against a set of data.
-- **Error Handling**: Provides meaningful error messages for invalid operations.
-- **Support for Operators**: Supports operators like `>`, `<`, `==`, `>=`, `<=`, and `!=`.
-- **User  -Defined Functions**: Allows users to register custom functions for evaluation.
-- **Persistence**: Save and load rules from a file.
-- **Extensibility**: Easily extendable for future enhancements.
+Type: Defines whether the node is an "operator" (e.g., AND/OR) or an "operand" (e.g., conditions like age, salary).
+Left and Right: References to child nodes for representing binary operations.
+Value: The condition or operand value (e.g., age > 30, department = 'Sales').
+2. API Design
+The project provides two main API functions:
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sai-satvika/RuleEngine.git
-2. Navigate to the project directory:
-   ```bash
-   cd RuleEngine
-3.Compile the Java file:
-javac src/RuleEngine.java
-
+create_rule(rule_string): This function parses a rule string (e.g., "age > 30 AND department = 'Sales'") and constructs the corresponding AST, returning the root node of the tree.
+combine_rules(rules): This function takes a list of rule strings, optimizes their combination, and returns a combined AST representing the merged rules. The aim is to reduce redundant checks and improve efficiency.
